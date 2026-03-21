@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Rincón – Restaurante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">El Rincón</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#reservas">Reservas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="hero-badge">Desde 2010</span>
+      <h1>Sabores que<br/><em>enamoran</em></h1>
+      <p>Cocina mediterránea de autor en el corazón de la ciudad. Ingredientes frescos, recetas con alma.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn btn-primary">Ver menú</a>
+        <a href="#reservas" class="btn btn-outline">Reservar mesa</a>
+      </div>
+    </div>
+    <div class="hero-badge-float">⭐ 4.9 · 320 reseñas</div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-label">Lo que ofrecemos</div>
+      <h2 class="section-title">Nuestro Menú</h2>
+
+      <div class="menu-tabs">
+        <button class="tab active" data-tab="entradas">Entradas</button>
+        <button class="tab" data-tab="principales">Principales</button>
+        <button class="tab" data-tab="postres">Postres</button>
+        <button class="tab" data-tab="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- RESERVAS -->
+  <section class="section section-dark" id="reservas">
+    <div class="container">
+      <div class="section-label light">Haz tu reserva</div>
+      <h2 class="section-title light">Reserva tu Mesa</h2>
+      <div class="reserva-wrap">
+        <form class="reserva-form" id="reservaForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre completo</label>
+              <input type="text" id="nombre" placeholder="Tu nombre" required/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Fecha</label>
+              <input type="date" id="fecha" required/>
+            </div>
+            <div class="form-group">
+              <label>Hora</label>
+              <select id="hora">
+                <option>13:00</option>
+                <option>13:30</option>
+                <option>14:00</option>
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+                <option>21:30</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Personas</label>
+              <select id="personas">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary full">Confirmar Reserva</button>
+        </form>
+        <div class="reserva-confirm hidden" id="reservaConfirm">
+          <div class="confirm-icon">✓</div>
+          <h3>¡Reserva confirmada!</h3>
+          <p id="confirmMsg"></p>
+          <button class="btn btn-outline" id="nuevaReserva">Hacer otra reserva</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-label">Encuéntranos</div>
+      <h2 class="section-title">Contacto</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h4>Dirección</h4>
+          <p>Av. Principal 123, Centro<br/>Ciudad, Chile</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <h4>Horario</h4>
+          <p>Lun–Vie: 13:00 – 15:30 / 20:00 – 23:00<br/>Sáb–Dom: 13:00 – 23:30</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h4>Teléfono</h4>
+          <p>+56 9 1234 5678</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h4>Email</h4>
+          <p>hola@elrincon.cl</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 El Rincón Restaurante · Desarrollado con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
